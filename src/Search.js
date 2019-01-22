@@ -30,7 +30,6 @@ class Search extends Component {
       // update the last page as needed to help keep track of when component should update
       if (this.state.lastSearch === this.state.query) {
         this.setState({ lastPage: this.state.lastPage + 1});
-        console.log('same', this.state)
         this.props.results({
           newSearch: false,
           movies: json.Search,
@@ -41,7 +40,6 @@ class Search extends Component {
           lastPage: 1,
           lastSearch: this.state.query,
         });
-        console.log('not same', this.state)
         this.props.results({
           newSearch: true,
           movies: json.Search,
