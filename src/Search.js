@@ -61,8 +61,6 @@ class Search extends Component {
 
   render() {
     if (this.props.page > 1 && this.props.page > this.state.lastPage) {
-      console.log('page in serach', this.props.page);
-      console.log('getting more movies');
       this.search();
     }
     return (
